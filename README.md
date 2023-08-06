@@ -2,3 +2,4 @@ This is PLD summative for the current course which is Intro to python programmin
 Project under construction.
 application features
 Creation of educational Content: Allow users to create, view, and comment on a post.
+Motivational Stories and Testimonials.
