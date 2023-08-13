@@ -4,6 +4,8 @@ import random
 import json
 import webbrowser
 
+
+
 def register_user():
     username = input("Enter your username: ")
     password = input("Enter your password: ")
@@ -11,6 +13,7 @@ def register_user():
         print("Registration successful!")
     else:
         print("Username already exists.")
+
 def login_user(video_data):
     username = input("Enter your username: ")
     password = input("Enter your password: ")
@@ -19,8 +22,6 @@ def login_user(video_data):
         user_features(username, video_data)
     else:
         print("Login failed. Incorrect username or password.")
-
-
 
 
 def watch_videos(video_data):
@@ -41,8 +42,6 @@ def watch_videos(video_data):
              print("Invalid video number.")
     except ValueError:
         print("Invalid input. Please enter a valid number.")
-
-
 
 
 def user_features(username, video_data):

@@ -7,3 +7,4 @@ def get_quotes():
 def get_testimonials():
     with open('data/testimonials.json', 'r') as file:
         return json.load(file)
+
