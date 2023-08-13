@@ -21,4 +21,9 @@ def load_users():
     except (FileNotFoundError, json.JSONDecodeError):
         return {}  # Return an empty dictionary if the file is missing or empty
 
+def save_users(users):
+    with open('data/users.json', 'w') as file:
+        json.dump(users, file)
+
+
 
