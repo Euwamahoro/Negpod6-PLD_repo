@@ -69,12 +69,10 @@ def user_features(username, video_data):
 
         elif choice == '3':
             watch_videos()
-
-
-
-
-    
 def main():
+    with open('data/videos/video_data.json', 'r') as video_file:
+        video_data = json.load(video_file)
+
     while True:
         print("Welcome to Why Edu!")
         print("1. Register")
@@ -85,7 +83,7 @@ def main():
         if choice == '1':
             register_user()
         elif choice == '2':
-            login_user()
+            login_user(video_data)
         elif choice == '3':
             print("Thank you for using Why Edu. Goodbye!")
             break
