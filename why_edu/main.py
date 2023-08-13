@@ -83,7 +83,7 @@ def main():
         if choice == '1':
             register_user()
         elif choice == '2':
-            login_user(video_data)
+            login_user(video_data)  # Pass video_data argument here
         elif choice == '3':
             print("Thank you for using Why Edu. Goodbye!")
             break
