@@ -6,24 +6,6 @@ import webbrowser
 
 
 
-def register_user():
-    username = input("Enter your username: ")
-    password = input("Enter your password: ")
-    if user.register(username, password):
-        print("Registration successful!")
-    else:
-        print("Username already exists.")
-
-def login_user(video_data):
-    username = input("Enter your username: ")
-    password = input("Enter your password: ")
-    if user.login(username, password):
-        print("Login successful!")
-        user_features(username, video_data)
-    else:
-        print("Login failed. Incorrect username or password.")
-
-
 def watch_videos(video_data):
     print("\nAvailable Videos:")
     for i, video in enumerate(video_data, start=1):
