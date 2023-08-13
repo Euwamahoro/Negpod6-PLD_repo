@@ -69,7 +69,7 @@ def user_features(username, video_data):
         elif choice == '3':
             watch_videos(video_data)
         elif choice == '4':
-            chat_with_users()
+            chat_with_users(username)
 
         elif choice == '5':
             print("Logout successful!")
