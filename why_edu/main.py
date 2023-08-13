@@ -68,7 +68,30 @@ def user_features(username, video_data):
 
         elif choice == '3':
             watch_videos(video_data)
+         elif choice == '4':
+            chat_with_users()
+
+        elif choice == '5':
+            print("Logout successful!")
+            break
+
+        else:
+            print("Invalid choice. Please choose a valid option.")
+
+def chat_with_users():
+    global chat_messages
+    while True:
+        print("\nChat with Users:")
+        for message in chat_messages:
+            print(message)
+        new_message = input("Enter your message (or 'exit' to return to features): ")
+        if new_message.lower() == 'exit':
+            break
+        chat_messages.append(f"{username}: {new_message}")
 def main():
+     global chat_messages
+    chat_messages = []  # Initialize chat messages
+    
     while True:
         print("Welcome to Why Edu!")
         print("1. Register")
