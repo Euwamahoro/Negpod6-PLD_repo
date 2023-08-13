@@ -1,6 +1,7 @@
 Why Edu - Console Application Documentation
-Table of Contents:
 
+
+Table of Contents:
 1. Introduction
 2. Installation
 3. Features
@@ -16,35 +17,8 @@ Table of Contents:
 2. Installation
 Clone or download the "Why Edu".
 
-git clone https://github.com/yourusername/why-edu.git
+git clone https://github.com/Euwamahoro/Negpod6-PLD_repo/
 cd why-edu
-
-
-
-Sure, here's a basic example of how you might structure a documentation for your Python console application "Why Edu":
-
-Why Edu - Console Application Documentation
-Table of Contents:
-
-Introduction
-Installation
-Features
-Usage
-Data Files
-Troubleshooting
-Contributors
-License
-1. Introduction
-"Why Edu" is a console-based educational application designed to provide users with access to various educational content, including quotes, testimonials, videos, and the ability to chat with other users.
-
-2. Installation
-Clone or download the "Why Edu" repository from GitHub.
-
-bash
-Copy code
-git clone https://github.com/yourusername/why-edu.git
-cd why-edu
-
 
 3. Features
 1. User registration and login
@@ -87,4 +61,4 @@ Make sure you have the required libraries installed. If not, install them using 
 
 
 9. License
-This project is licensed under the MIT License. See the LICENSE file for details.
+This project is licensed under the MIT License.
