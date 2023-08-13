@@ -68,7 +68,7 @@ def user_features(username, video_data):
 
         elif choice == '3':
             watch_videos(video_data)
-         elif choice == '4':
+        elif choice == '4':
             chat_with_users()
 
         elif choice == '5':
