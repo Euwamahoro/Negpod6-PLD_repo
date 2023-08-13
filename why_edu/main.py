@@ -89,7 +89,8 @@ def chat_with_users():
             break
         chat_messages.append(f"{username}: {new_message}")
 def main():
-     global chat_messages
+    
+    global chat_messages
     chat_messages = []  # Initialize chat messages
     
     while True:
