@@ -78,7 +78,7 @@ def user_features(username, video_data):
         else:
             print("Invalid choice. Please choose a valid option.")
 
-def chat_with_users():
+def chat_with_users(username):
     global chat_messages
     while True:
         print("\nChat with Users:")
@@ -88,11 +88,14 @@ def chat_with_users():
         if new_message.lower() == 'exit':
             break
         chat_messages.append(f"{username}: {new_message}")
+
 def main():
-    
     global chat_messages
     chat_messages = []  # Initialize chat messages
-    
+
+    with open('data/videos/video_data.json', 'r') as video_file:
+        video_data = json.load(video_file)
+
     while True:
         print("Welcome to Why Edu!")
         print("1. Register")
@@ -105,7 +108,7 @@ def main():
         elif choice == '2':
             with open('data/videos/video_data.json', 'r') as video_file:
                 video_data = json.load(video_file)
-            login_user(video_data)  # Pass video_data argument here
+            login_user(video_data)
         elif choice == '3':
             print("Thank you for using Why Edu. Goodbye!")
             break
