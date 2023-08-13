@@ -78,7 +78,7 @@ def user_features(username, video_data):
         else:
             print("Invalid choice. Please choose a valid option.")
 
-def chat_with_users():
+def chat_with_users(username):
     global chat_messages
     while True:
         print("\nChat with Users:")
