@@ -58,16 +58,16 @@ def user_features(username, video_data):
             quotes = features.get_quotes()
             random_quote = random.choice(quotes)
             print("Random Quote:")
-            print("- " + random_quote)
+            print(random_quote)
 
         elif choice == '2':
             testimonials = features.get_testimonials()
             print("Testimonials:")
             for testimonial in testimonials:
-                print("- " + testimonial)
+                print(testimonial)
 
         elif choice == '3':
-            watch_videos()
+            watch_videos(video_data)
 def main():
     while True:
         print("Welcome to Why Edu!")
