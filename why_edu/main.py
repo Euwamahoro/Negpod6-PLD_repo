@@ -47,8 +47,8 @@ def watch_videos(video_data):
 def user_features(username, video_data):
     while True:
         print("\nWelcome, " + username + "!")
-        print("1. Get Random Quote")
-        print("2. Get Testimonials")
+        print("1. Get Educational Quote")
+        print("2. Get Testimonial")
         print("3. Watch Videos")
         print("4. Chat with Users")
         print("5. Logout")
@@ -57,14 +57,14 @@ def user_features(username, video_data):
         if choice == '1':
             quotes = features.get_quotes()
             random_quote = random.choice(quotes)
-            print("Random Quote:")
+            print("Educational Quote:")
             print(random_quote)
 
         elif choice == '2':
             testimonials = features.get_testimonials()
+            random_testimonial = random.choice(testimonials)
             print("Testimonials:")
-            for testimonial in testimonials:
-                print(testimonial)
+            print(random_testimonial)
 
         elif choice == '3':
             watch_videos(video_data)
