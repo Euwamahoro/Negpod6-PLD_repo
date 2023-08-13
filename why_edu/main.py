@@ -4,6 +4,14 @@ import random
 import json
 import webbrowser
 
+def register_user():
+    username = input("Enter your username: ")
+    password = input("Enter your password: ")
+    if user.register(username, password):
+        print("Registration successful!")
+    else:
+        print("Username already exists.")
+
 
 
 def watch_videos(video_data):
