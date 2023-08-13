@@ -38,10 +38,10 @@ python main.py
 
 5. Data Files
 
-data/users.json: Stores user account information.
-data/quotes.json: Contains a collection of educational quotes.
-data/testimonials.json: Holds a list of educational testimonials.
-data/videos/video_data.json: Contains information about educational videos.
+1. data/users.json: Stores user account information.
+2. data/quotes.json: Contains a collection of educational quotes.
+3. data/testimonials.json: Holds a list of educational testimonials.
+4. data/videos/video_data.json: Contains information about educational videos.
 
 6. Troubleshooting
 If encountering issues with video playback, ensure that the video URLs in video_data.json are valid.
@@ -50,11 +50,17 @@ Make sure you have the required libraries installed. If not, install them using 
 
 7. Contributors
    Joshua Alana (GitHub: Joshbam-joshwilly)
+
    Jean Chrisostome Dufitumukiza (Github: Chrisos10)
+
    Enock Uwamahoro (Euwamahoro)
+
    Dorcus Adich Alier Malony (dorcusmalony)
+
    Latjor Wuon Lat Dak (Latjor-Wuon)
+
    Vaste Uwase (vuwase)
+
    Samuel Dushime (Samenergy)
    
    
