@@ -5,6 +5,8 @@ import features
 import random
 import json
 import webbrowser
+import os
+
 
 
 
@@ -80,16 +82,57 @@ def user_features(username, video_data):
         else:
             print("Invalid choice. Please choose a valid option.")
 
+
 def chat_with_users(username):
-    global chat_messages
-    while True:
-        print("\nChat with Users:")
-        for message in chat_messages:
-            print(message)
-        new_message = input("Enter your message (or 'exit' to return to features): ")
-        if new_message.lower() == 'exit':
-            break
-        chat_messages.append(f"{username}: {new_message}")
+
+    # Check if chat messages file exists
+    if not os.path.exists('chat_messages.txt'):
+        with open('chat_messages.txt', 'w'):
+            pass
+
+    # Read chat messages from file
+    with open('chat_messages.txt', 'r') as file:
+        chat_messages = file.readlines()
+
+    # Print chat messages
+    for chat in chat_messages:
+        sender, message = chat.split(':')
+        if sender == username:
+            print(f"You: {message}")
+        else:
+            print(f"{sender}: {message}")
+
+    # Get new message from user
+    new_message = input("Enter your message (or 'exit' to return to features): ")
+
+    # Check if user wants to exit
+    if new_message.lower() == "exit":
+        print("Exiting chat...")
+        return
+
+    # Save new message to file
+    with open('chat_messages.txt', 'a') as file:
+        file.write(f"{username}: {new_message}\n")
+
+
+def get_messages():
+    connection = connect_to_database()
+
+    cursor = connection.cursor()
+    query = "SELECT * FROM chat_messages"
+    cursor.execute(query)
+    messages = cursor.fetchall()
+
+    return messages
+
+def save_message(message, sender):
+    connection = connect_to_database()
+
+    query = "INSERT INTO chat_messages (message, sender) VALUES (%s, %s)"
+    values = (message, sender)
+    cursor = connection.cursor()
+    cursor.execute(query, values)
+    connection.commit()
 
 def main():
     global chat_messages
@@ -117,5 +160,6 @@ def main():
         else:
             print("Invalid choice. Please choose a valid option.")
 
+    
 if __name__ == "__main__":
     main()
